@@ -28,5 +28,51 @@ int main() {
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
 
+    //variáveis
+    int i = 0;
+    int peca;
+
+    //Menu
+    printf("Bem-Vindo ao xadrez da quebrada:\n");
+    printf("\n");
+    printf("1. Torre\n");
+    printf("2. Bispo\n");
+    printf("3. Rainha\n");
+    printf("Escolha uma peça: ");
+    
+    //Entrada de Dados
+    scanf("%d", &peca);
+
+    //Lógica do programa
+    switch (peca){
+    case 1:
+        while (i <= 5){
+            printf("Direita ");
+            i++;
+        }
+        break;
+
+    case 2:
+        do{
+            printf("Cima ");
+            printf("Direita ");
+            i++;
+        } while (i <= 4);
+        break;
+
+    case 3:
+        for (int a = 0; a <= 7; a++){
+            printf("Esquerda ");
+        }
+        break;
+    
+    default:
+        printf("Opção inválida, tente novamente.");
+        break;
+    }
+    
+
     return 0;
+    
+    
 }
