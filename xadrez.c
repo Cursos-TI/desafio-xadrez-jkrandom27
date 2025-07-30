@@ -38,6 +38,7 @@ int main() {
     printf("1. Torre\n");
     printf("2. Bispo\n");
     printf("3. Rainha\n");
+    printf("4. Cavalo\n");
     printf("Escolha uma peça: ");
     
     //Entrada de Dados
@@ -61,8 +62,22 @@ int main() {
         break;
 
     case 3:
-        for (int a = 0; a <= 7; a++){
+        for(i = 0; i <= 7; i++){
             printf("Esquerda ");
+        }
+        break;
+
+    case 4:
+        for(i = 1; i < 2; i++){
+            
+            int j = 1;
+
+            while(j <= 2){
+                printf("Baixo ");
+                j++;
+            }
+
+            printf("Esquerda");
         }
         break;
     
