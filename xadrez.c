@@ -65,7 +65,7 @@ void rainha(int k){
 int main() {
     
     //Menu
-    int peca;
+    int mover;
 
     printf("Bem-Vindo ao xadrez da quebrada:\n");
     printf("\n");
@@ -76,10 +76,10 @@ int main() {
     printf("Escolha uma peça: ");
     
     //Entrada de Dados
-    scanf("%d", &peca);
+    scanf("%d", &mover);
 
     //Lógica do programa
-    switch (peca){
+    switch (mover){
 
     //Torre
     case 1:
@@ -119,7 +119,6 @@ int main() {
         printf("Opção inválida, tente novamente.");
         break;
     }
-    
     
     return 0;
     
