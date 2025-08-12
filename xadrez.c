@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 #define TORRE 5
-#define BISPO 2
+#define BISPO 5
 #define RAINHA 8
-#define CAVALO
+#define CAVALO 1
 
 // Desafio de Xadrez - MateCheck
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
@@ -38,6 +38,17 @@ void torre(int i){
         printf("Direita\n");
         //recusividade(parametro decremento)
         torre(i - 1);
+    }
+}
+
+void bispo(int j){
+
+    if(j > 0){
+        //ação
+        printf("Cima\n");
+        printf("Direita\n");
+        //recusividade(parametro decremento)
+        bispo(j - 1);
     }
 }
 
@@ -77,15 +88,7 @@ int main() {
 
     //Bispo
     case 2:
-        for (int i = 0; i < BISPO; i++){
-            for (int j = 0; j < 2; j++){
-                printf("Cima\n");
-            }
-
-            printf("Direita\n");
-            
-        }
-        
+        bispo(BISPO);
         break;
     
     //Rainha
@@ -94,17 +97,21 @@ int main() {
     
     //Cavalo
     case 4:
-        for(int i = 1; i < 2; i++){
-            
-            int m = 1;
-
-            while(m <= 2){
+        int direcaoFeita = 0;
+        for (int i = 0; i < CAVALO; i++){
+            for (int j = 0; j < 2; j++){
                 printf("Cima\n");
-                m++;
+
+                //Caso ande duas casas, pare!
+                if (direcaoFeita == 2){
+                    break;
+                }
+                
             }
 
             printf("Direita\n");
         }
+        
         break;
     
     //Opção fora do menu
